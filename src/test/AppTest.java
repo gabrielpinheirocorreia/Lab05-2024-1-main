@@ -1,24 +1,14 @@
 package test;
 
+import static org.junit.Assert.*;
 
-import static org.junit.Assert.assertEquals;
-
-import org.junit.Before;
 import org.junit.Test;
 
-import list.EstruturaElementar;
-import list.Sorter;
-import main.sorter.MergeSort;
-import main.sorter.QuickSorter;
+import sorter.MergeSort;
+import sorter.QuickSorter;
+import sorter.Sorter;
 
 public class AppTest {
-
-    private EstruturaElementar e;
-
-    @Before
-    public void setUp() throws Exception {
-        e = null;
-    }
 
     @Test
     public void testMerge() {
@@ -58,7 +48,7 @@ public class AppTest {
     public void testParticiona() {
         QuickSorter m = new QuickSorter();
         int[] values = { 3, 4, 5, 1, 2 };
-        int p = m.partition(values, 0, values.length-1);
+        int p = m.partition(values, 0, values.length - 1);
         assertEquals(2, p);
     }
 
